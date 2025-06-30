@@ -1,0 +1,44 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Web</title>
+    <!-- Inclui Tailwind CSS para estilização fácil -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para toda a página */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-400 to-blue-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full text-center">
+        <!-- Título principal da página -->
+        <h1 class="text-4xl font-bold text-gray-800 mb-4 rounded-md">Bem-vindo à Sua Página!</h1>
+        <!-- Parágrafo de introdução -->
+        <p class="text-lg text-gray-600 mb-6 rounded-md">
+            Esta é uma página web de exemplo. Sinta-se à vontade para personalizá-la como quiser.
+            Podemos adicionar mais seções, imagens ou interatividade!
+        </p>
+        <!-- Botão interativo -->
+        <button id="actionButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+            Clique Aqui
+        </button>
+    </div>
+
+    <script>
+        // Adiciona um listener de evento ao botão
+        document.getElementById('actionButton').addEventListener('click', function() {
+            // Altera o texto do parágrafo ao clicar no botão
+            const paragraph = document.querySelector('p');
+            paragraph.textContent = "Você clicou no botão! Que legal!";
+            // Muda a cor do botão após o clique
+            this.classList.remove('bg-blue-500', 'hover:bg-blue-700');
+            this.classList.add('bg-green-500', 'hover:bg-green-700');
+        });
+    </script>
+</body>
+</html>
